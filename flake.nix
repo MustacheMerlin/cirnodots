@@ -32,6 +32,7 @@
               home.packages = with pkgs; [
                 firefox
                 librewolf
+                prismlauncher
                 
               ];
 

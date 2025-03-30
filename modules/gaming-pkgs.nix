@@ -7,5 +7,6 @@
     mangohud
     gamemode
     gamescope
+    steam-run
   ];
 }

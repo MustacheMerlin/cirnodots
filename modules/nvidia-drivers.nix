@@ -6,6 +6,8 @@
     driSupport32Bit = true; # necessary for old games and the steam client, so important!
   };
 
+  hardware.amdgpu.opencl.enable = true;
+
   services.xserver.videoDrivers = ["amdgpu" "nvidia"];
   hardware.nvidia = {
 

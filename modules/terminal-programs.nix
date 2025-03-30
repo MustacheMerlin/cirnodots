@@ -12,7 +12,9 @@
     yazi
     fzf
     sshfs
+    tmux
     zoxide
     bottom
+    vim-full
   ];
 }
