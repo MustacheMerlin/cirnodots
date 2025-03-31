@@ -38,7 +38,8 @@
     nvidiaSettings = true;
 
     # Optionally, you may need to select the appropriate driver version for your specific GPU.
-    package = config.boot.kernelPackages.nvidiaPackages.stable; # correct driver for 1070ti as of 2024, will change in future.
+    # package = config.boot.kernelPackages.nvidiaPackages.stable; # correct driver for 1070ti as of 2024, will change in future.
+    package = config.boot.kernelPackages.nvidiaPackages.latest; # correct driver for 4060  as of 2024, will change in future.
    # package = config.boot.kernelPackages.nvidiaPackages.legacy_470; # correct drvier for meliodas gtx860m
   };
 
