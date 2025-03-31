@@ -35,7 +35,7 @@
   hardware.opengl.extraPackages = with pkgs; [
     rocmPackages.clr.icd
   ];
-  environment.variables.AMD_VULKAN_ICD = "RADV";
+  #environment.variables.AMD_VULKAN_ICD = "RADV";
   environment.variables.__NV_PRIME_RENDER_OFFLOAD = 0;
 
   networking.hostName = "Cirno";
