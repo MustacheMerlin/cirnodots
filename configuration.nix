@@ -50,6 +50,8 @@
     packages = with pkgs; [
       clinfo
       koboldcpp
+      vulkan-tools
+      protonvpn-gui
     ];
   };
 
