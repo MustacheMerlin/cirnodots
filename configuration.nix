@@ -64,7 +64,8 @@
   # Enable the OpenSSH daemon.
    services.openssh.enable = true;
   # Open ports in the firewall.
-  networking.firewall.allowedTCPPorts = [ 5001 5002 8188 ];
+  networking.firewall.allowedTCPPorts = [ 5001 5002 8188 3216 ];
+  networking.firewall.allowedUDPPorts = [ 5001 5002 8188 3216 ];
 
   hardware.steam-hardware.enable = true;
 
