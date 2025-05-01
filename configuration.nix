@@ -76,4 +76,6 @@
       formatted = builtins.concatStringsSep "\n" sortedUnique;
     in
       formatted;
+
+  system.stateVersion = "25.05";
 }
