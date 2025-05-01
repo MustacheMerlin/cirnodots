@@ -54,11 +54,14 @@
     xorg.libxcb
     xorg.libxkbfile
     xorg.libxshmfence
+    xorg.libICE
+    xorg.libSM
     zlib
     linuxPackages.nvidia_x11
     rocmPackages.llvm.openmp
     rocmPackages.clr
     openvr
+    xwayland
   ];
 
 }
