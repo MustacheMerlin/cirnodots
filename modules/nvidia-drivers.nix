@@ -1,9 +1,9 @@
 { config, pkgs, ... }: 
 
 {
-  hardware.opengl = {
+  hardware.graphics = {
     enable = true;
-    driSupport32Bit = true; # necessary for old games and the steam client, so important!
+    enable32Bit = true; # necessary for old games and the steam client, so important!
   };
 
   hardware.amdgpu.opencl.enable = true;
