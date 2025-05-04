@@ -17,8 +17,14 @@
    ./modules/coolercontrol.nix
    ./modules/vr.nix
    ./modules/corectrl.nix
-   ./modules/sunshine.nix
+   #./modules/sunshine.nix
   ];
+
+  services.blueman.enable = true;
+  hardware.bluetooth.enable = true; # enables support for Bluetooth
+  hardware.bluetooth.powerOnBoot = true; # powers up the default Bluetooth controller on boot
+
+
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   nixpkgs.config.allowUnfree = true;
 
@@ -52,6 +58,7 @@
       koboldcpp
       vulkan-tools
       protonvpn-gui
+      uv
     ];
   };
 
@@ -62,9 +69,19 @@
   security.polkit.enable = true;
 
   # Enable the OpenSSH daemon.
-   services.openssh.enable = true;
+  services.openssh = {
+    enable = true;
+    ports = [ 22 ];
+    settings = {
+      PasswordAuthentication = true;
+      AllowUsers = null;
+      UseDns = true;
+      X11Forwarding = false;
+    };
+  };
   # Open ports in the firewall.
-  networking.firewall.allowedTCPPorts = [ 5001 5002 8188 3216 ];
+  #networking.firewall.enable = false;
+  networking.firewall.allowedTCPPorts = [ 22 5001 5002 8188 3216 ];
   networking.firewall.allowedUDPPorts = [ 5001 5002 8188 3216 ];
 
   hardware.steam-hardware.enable = true;
