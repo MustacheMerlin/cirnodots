@@ -19,6 +19,7 @@
    ./modules/corectrl.nix
    #./modules/sunshine.nix
   ];
+  system.nixos.label = "testing_labels";
 
   services.blueman.enable = true;
   hardware.bluetooth.enable = true; # enables support for Bluetooth
