@@ -13,6 +13,7 @@
     fzf
     jq
     eza
+    bat
     sshfs
     tmux
     zoxide
