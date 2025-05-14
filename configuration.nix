@@ -81,13 +81,17 @@
     };
   };
   # Open ports in the firewall.
-  networking.firewall.enable = true;
-  networking.firewall.allowedTCPPorts = [ 22 5001 5002 8188 3216 47984 47989 47990 48010 ];
-  networking.firewall.allowedUDPPorts = [ 5001 5002 8188 3216 ];
-  networking.firewall.allowedUDPPortRanges = [
-    { from = 47998; to = 48000; }
-    { from = 8000; to = 8010; }
-  ];
+  networking.firewall = {
+    enable = true;
+    logRefusedPackets = true;
+    logRefusedConnections = true;
+    allowedTCPPorts = [ 22 5001 5002 8188 3216 47984 47989 47990 48010 ];
+    allowedUDPPorts = [ 5001 5002 8188 3216 ];
+    allowedUDPPortRanges = [
+      { from = 47998; to = 48000; }
+      { from = 8000; to = 8010; }
+    ];
+  };
 
 
   hardware.steam-hardware.enable = true;
