@@ -46,6 +46,7 @@
 
   networking.hostName = "Cirno";
   networking.networkmanager.enable = true;
+  networking.usePredictableInterfaceNames = true;
 
   home-manager.backupFileExtension = "backup";
 
