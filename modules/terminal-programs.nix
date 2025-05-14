@@ -11,6 +11,8 @@
     git-lfs
     yazi
     fzf
+    jq
+    eza
     sshfs
     tmux
     zoxide
