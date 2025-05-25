@@ -15,6 +15,7 @@
    ./modules/gaming-pkgs.nix
    ./modules/openrgb.nix
    ./modules/coolercontrol.nix
+   ./modules/docker.nix
   # ./modules/vr.nix
    ./modules/corectrl.nix
    #./modules/sunshine.nix
