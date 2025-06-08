@@ -13,7 +13,6 @@
    ./modules/xbone-controller.nix
    ./modules/terminal-programs.nix
    ./modules/gaming-pkgs.nix
-   ./modules/openrgb.nix
    ./modules/coolercontrol.nix
    ./modules/docker.nix
   # ./modules/vr.nix
@@ -24,7 +23,6 @@
   services.blueman.enable = true;
   hardware.bluetooth.enable = true; # enables support for Bluetooth
   hardware.bluetooth.powerOnBoot = true; # powers up the default Bluetooth controller on boot
-
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   nixpkgs.config.allowUnfree = true;

@@ -1,9 +1,9 @@
 { config, pkgs, ... }:
 
 {
-  virtualization.docker.enable = true;
+  virtualisation.docker.enable = true;
   users.extraGroups.docker.members = [ "lynn" ];
-  virtualization.docker.rootless = {
+  virtualisation.docker.rootless = {
     enable = true;
     setSocketVariable = true;
   }; # enable with systemctl --user enable --now docker and check with systemctl --user status docker
@@ -14,6 +14,7 @@
     metrics-addr = "0.0.0.0:9323";
     ipv6 = true;
     fixed-cidr-v6 = "fd00::/80";
+    data-root = "/mnt/bigchungus/docker";
   };
 
 }
