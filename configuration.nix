@@ -52,7 +52,7 @@
   users.users.lynn = {
     isNormalUser = true;
     description = "Lynn";
-    extraGroups = [ "networkmanager" "wheel" "audio" "render" "kvm" "input" "corectrl" "video" ]; # audio helps prevent sound popping, render is important for rocm, input for controllers, corectrl is gpu control, kvm for qemu
+    extraGroups = [ "networkmanager" "docker" "wheel" "audio" "render" "kvm" "input" "corectrl" "video" ]; # audio helps prevent sound popping, render is important for rocm, input for controllers, corectrl is gpu control, kvm for qemu
     packages = with pkgs; [
       clinfo
       koboldcpp
@@ -67,6 +67,7 @@
   systemd.services.lactd.wantedBy = ["multi-user.target"];
 
   security.polkit.enable = true;
+  #security.pam.loginLimits.enable = true;
 
   # Enable the OpenSSH daemon.
   services.openssh = {
