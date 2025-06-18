@@ -8,5 +8,6 @@
     mangohud
     gamescope
     steam-run
+    umu-launcher
   ];
 }
