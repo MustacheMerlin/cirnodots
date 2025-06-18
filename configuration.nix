@@ -62,7 +62,8 @@
     ];
   };
 
-  environment.systemPackages = with pkgs; [ lact ];
+
+  environment.systemPackages = with pkgs; [ lact radeontop linux-firmware ];
   systemd.packages = with pkgs; [ lact ];
   systemd.services.lactd.wantedBy = ["multi-user.target"];
 
