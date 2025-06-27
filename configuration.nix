@@ -30,7 +30,7 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
   boot.kernelPackages = pkgs.linuxPackages_latest;
-  boot.kernelParams = [ "split_lock_detect=off" ];
+  boot.kernelParams = [ "split_lock_detect=off" "amdgpu.dpm=1" ];
   boot.kernelModules = ["amdgpu"];
 
   #systemd.tmpfiles.rules = [
@@ -63,7 +63,7 @@
   };
 
 
-  environment.systemPackages = with pkgs; [ lact radeontop linux-firmware ];
+  environment.systemPackages = with pkgs; [ lact radeontop linux-firmware pciutils ];
   systemd.packages = with pkgs; [ lact ];
   systemd.services.lactd.wantedBy = ["multi-user.target"];
 

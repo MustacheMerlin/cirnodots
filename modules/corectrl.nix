@@ -6,8 +6,8 @@
     enable = true;
     gpuOverclock = {
       enable = true;
-      ppfeaturemask = "0xffffffff";
+     # ppfeaturemask = "0xffffffff";
     };
   };
-  boot.kernelParams = [ "amdgpu.ppfeaturemask=0xffffffff" ];
+  #boot.kernelParams = [ "amdgpu.ppfeaturemask=0xffffffff" ];
 }
