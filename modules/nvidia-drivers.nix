@@ -31,7 +31,7 @@
     # https://github.com/NVIDIA/open-gpu-kernel-modules#compatible-gpus 
     # Only available from driver 515.43.04+
     # Currently alpha-quality/buggy, so false is currently the recommended setting.
-    open = false;
+    open = true;
 
     # Enable the Nvidia settings menu,
 	# accessible via `nvidia-settings`.
@@ -39,7 +39,7 @@
 
     # Optionally, you may need to select the appropriate driver version for your specific GPU.
     # package = config.boot.kernelPackages.nvidiaPackages.stable; # correct driver for 1070ti as of 2024, will change in future.
-    package = config.boot.kernelPackages.nvidiaPackages.latest; # correct driver for 4060  as of 2024, will change in future.
+    package = config.boot.kernelPackages.nvidiaPackages.stable; # correct driver for 4060  as of 2024, will change in future.
    # package = config.boot.kernelPackages.nvidiaPackages.legacy_470; # correct drvier for meliodas gtx860m
   };
 

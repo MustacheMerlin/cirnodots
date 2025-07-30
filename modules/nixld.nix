@@ -60,6 +60,9 @@
 #    linuxPackages.nvidia_x11
 #    rocmPackages.llvm.openmp
 #    rocmPackages.clr
+    cudaPackages.cuda_cudart
+    cudaPackages.libcublas
+    cudaPackages.cudnn
     openvr
     xwayland
   ];
