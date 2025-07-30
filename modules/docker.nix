@@ -2,12 +2,12 @@
 
 {
   virtualisation.docker.enable = true;
-  #users.extraGroups.docker.members = [ "lynn" ]; # security hole, docker group is equivalent to being root.
+  users.extraGroups.docker.members = [ "lynn" ]; # security hole, docker group is equivalent to being root.
   hardware.nvidia-container-toolkit.enable = true;
-   virtualisation.docker.rootless = {
-     enable = true;
-     setSocketVariable = true;
-   }; # enable with systemctl --user enable --now docker and check with systemctl --user status docker
+#   virtualisation.docker.rootless = {
+#     enable = true;
+#     setSocketVariable = true;
+#   }; # enable with systemctl --user enable --now docker and check with systemctl --user status docker
  
    virtualisation.docker.daemon.settings = {
      userland-proxy = false;
