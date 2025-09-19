@@ -10,16 +10,18 @@
    ./modules/locale.nix
    ./modules/nixld.nix
    ./modules/pipewire.nix
-   ./modules/xbone-controller.nix
+   #./modules/xbone-controller.nix
    ./modules/terminal-programs.nix
    ./modules/gaming-pkgs.nix
    ./modules/coolercontrol.nix
    ./modules/docker.nix
   # ./modules/vr.nix
    ./modules/corectrl.nix
-   #./modules/sunshine.nix
+   ./modules/sunshine.nix
   ];
 
+  virtualisation.virtualbox.host.enable = true;
+  users.extraGroups.vboxusers.members = [ "lynn" ];
   services.blueman.enable = true;
   hardware.bluetooth.enable = true; # enables support for Bluetooth
   hardware.bluetooth.powerOnBoot = true; # powers up the default Bluetooth controller on boot
@@ -59,6 +61,8 @@
       vulkan-tools
       protonvpn-gui
       uv
+      gocryptfs
+      keepassxc
     ];
   };
 
