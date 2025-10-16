@@ -50,6 +50,7 @@
   networking.usePredictableInterfaceNames = true;
 
   home-manager.backupFileExtension = "backup";
+  services.flatpak.enable = true;
 
   users.users.lynn = {
     isNormalUser = true;
